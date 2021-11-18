@@ -1,0 +1,22 @@
+{
+  "name": "index.html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ciubari Maxim",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^6.0.0",
+    "sass": "^1.42.1",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
