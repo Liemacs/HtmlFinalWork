@@ -4,133 +4,134 @@
     left: 0;
     top: 0;
     z-index: 50;
-    
+  
     &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 4;      
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
     }
     ._header__content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      min-height: 70px;
+      align-items: center;
+      z-index: 4;
+      @media (max-width: 767px) {
+        min-height: 55px;
+      }
+      .logo {
         position: relative;
-        display: flex;
-        justify-content: space-between;
-        min-height: 70px;
-        align-items: center;
         z-index: 4;
-        @media (max-width: 767px){ 
-            min-height: 55px;
+      }
+      ._menu_content {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        @media (max-width: 767px) {
+          .menu_body {
+            z-index: 2;
+            position: absolute;
+            top: -500px;
+            left: 0;
+            width: 100%;
+            background-color: $gray-color;
+            &.active {
+              transition: all 0.3s ease 0s;
+              top: 0;
+            }
+          }
         }
-        .logo {
-            position: relative;
-            z-index: 4;
-        }
-        ._menu_content {
+  
+        .menu_list {
+          @media (max-width: 767px) {
+            padding: 70px 0 0 10px;
+            font-size: 20px;
+            .menu_link {
+              display: block;
+              align-items: center;
+              padding: 20px 0;
+            }
+          }
+          @media (min-width: 767.98px) {
             display: flex;
-            align-items: center;
-            font-size: 12px;
-            @media (max-width: 767px){ 
-            .menu_body {
-                z-index: 2;
-                position: absolute;
-                top: -500px;
-                left: 0;
-                width: 100%;
-                background-color: $gray-color;
-                &.active {
-                    transition: all .3s ease 0s;
-                    top: 0;
-                }
+          }
+          li {
+            padding: 0 30px 0 0;
+            .menu_link {
+              color: #a2a4a6;
+              &:hover {
+                color: #000;
+              }
             }
+          }
         }
-            
-            .menu_list {
-                @media (max-width: 767px){ 
-                    padding: 70px 0 0 10px;
-                    font-size: 20px;                   
-                    .menu_link {
-                        display: block;
-                        align-items: center;
-                        padding: 20px 0;
-                    }
-                }
-                @media (min-width: 767.98px){
-                    display: flex;
-                }
-                li {
-                    padding: 0 30px 0 0;
-                    .menu_link {
-                        color: #a2a4a6;
-                        &:hover {
-                            color: #000;
-                        }
-                    }
-                }
-            }
-            .bnt_link {
-                background-color: #000;
-                color: #fff;
-                padding: 16px 17px;
-                border: none;
-                border-radius: 3px;
-                letter-spacing: .9px;
-                text-transform: uppercase;
-                z-index: 4;
-            }
+        .bnt_link {
+          background-color: #000;
+          color: #fff;
+          padding: 16px 17px;
+          border: none;
+          border-radius: 3px;
+          letter-spacing: 0.9px;
+          text-transform: uppercase;
+          z-index: 4;
         }
+      }
+      .header_burger {
+        display: none;
+        &.active {
+          &::before {
+            transition: all 0.3s ease 0s;
+            transform: rotate(45deg);
+            top: 5px;
+          }
+          &::after {
+            transition: all 0.3s ease 0s;
+            transform: rotate(-45deg);
+            bottom: 5px;
+          }
+          span {
+            transform: scale(0);
+          }
+        }
+      }
+      @media (max-width: 767px) {
         .header_burger {
-            display: none;
-            &.active{
-                &::before{
-                    transition: all .3s ease 0s;
-                    transform: rotate(45deg);
-                    top: 5px;
-                }
-                &::after{
-                    transition: all .3s ease 0s;
-                    transform: rotate(-45deg);
-                    bottom: 5px;
-                }
-                span {
-                    transform: scale(0);
-                }
-            }
+          display: block;
+          position: relative;
+          width: 20px;
+          height: 12px;
+          cursor: pointer;
+          z-index: 4;
+          span {
+            position: absolute;
+            background-color: #000;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 5px;
+          }
+          &::before,
+          &::after {
+            content: "";
+            background-color: #000;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+          }
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
         }
-        @media (max-width: 767px){
-            .header_burger {
-                    display: block;
-                    position: relative;
-                    width: 20px;
-                    height: 12px;
-                    cursor: pointer;
-                    z-index: 4;
-                    span {
-                        position: absolute;
-                        background-color: #000;
-                        left: 0;
-                        width: 100%;
-                        height: 2px;
-                        top: 5px;
-                    }
-                    &::before, &::after{
-                        content: '';
-                        background-color: #000;
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        left: 0;
-                    }
-                    &::before {
-                        top: 0;
-                    }
-                    &::after {
-                        bottom: 0;
-                    }
-            }
-            
-        }
+      }
     }
-}
+  }
+  

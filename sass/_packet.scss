@@ -1,59 +1,60 @@
 .packet_section {
     padding: 80px 0;
-}
-
-.box_packet {
+  }
+  
+  .box_packet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     .item_packet {
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-    justify-content: space-between;
-
-        text-align: center;
-        width: calc(33.33% - 100px);
-        @media (max-width: 991.98px){
-            width: calc(45% - 100px);
-            margin-top: 25px;
-            &:last-child{
-                width: 100%;
-            }
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      text-align: center;
+      width: calc(33.33% - 100px);
+      @media (max-width: 991.98px) {
+        width: calc(45% - 100px);
+        margin-top: 25px;
+        &:last-child {
+          width: 100%;
         }
-        @media (max-width: 651.98px){
-                width: 100%;
-                &:not(:first-child){
-                    margin-top: 25px;
-                  }
+      }
+      @media (max-width: 651.98px) {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 25px;
         }
-        span {
-            text-transform: uppercase;
-            font-weight: 200;
-        }
-        h1 {
-            font-size: 50px;
-            font-weight: 900;
-            margin: 50px 0;
-        }
-        p {
-            color: #a2a2a2;
-            line-height: 1.3rem;
-        }
+      }
+      span {
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+      h1 {
+        font-size: 50px;
+        font-weight: 900;
+        margin: 50px 0;
+      }
+      p {
+        color: #a2a2a2;
+        line-height: 1.3rem;
+      }
+      a {
+        display: inline-block;
+        font-size: 12px;
+        padding: 25px 0;
+        margin-top: 50px;
+        border-radius: 50px;
+        text-transform: uppercase;
+      }
+      &:nth-of-type(2) {
+        background-color: #000;
+        color: #fff;
         a {
-            display: inline-block;
-            font-size: 12px;
-            padding: 25px 0;
-            margin-top: 50px;
-            border-radius: 50px;
-            text-transform: uppercase;
+          background-color: #26e6e6;
         }
-        &:nth-of-type(2) {
-            background-color: #000;
-            color: #fff;
-            a {
-                background-color: #26e6e6;
-            }
-        }
+      }
     }
-}
+  }
+  

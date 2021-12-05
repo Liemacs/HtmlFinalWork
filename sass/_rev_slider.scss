@@ -1,66 +1,64 @@
 .rev_section {
     padding: 40px 0;
-}
-
-.slide {
-        position: relative;
-        width: 660px;
-        background-color: #fff;
-        z-index: 2;
-        padding: 30px 40px;
-        margin: 0px 25px;
-        @media(max-width: 778.98px) {
-            width: calc(200px + (660px - 200px) * (100vw / 1300px));
-            padding: calc(20px + (30px - 20px) * (100vw / 1300px));
-        }
-          .txt_slide{
-              text-align: center;
-              p {
-                  font-size: 38px;
-                  padding-bottom: 15px;
-                  @media(max-width: 778.98px) {
-                    font-size: calc(16px + (38px - 16px) * (100vw / (calc($maxWidthContainer - 20px))));
-                }
-              }
-              span {
-                  text-transform: uppercase;
-                  font-size: 12px;
-              }
-
-          }      
+  }
+  
+  .slide {
+    position: relative;
+    width: 660px;
+    background-color: #fff;
+    z-index: 2;
+    padding: 30px 40px;
+    margin: 0px 25px;
+    @media (max-width: 778.98px) {
+      width: calc(200px + (660px - 200px) * (100vw / 1300px));
+      padding: calc(20px + (30px - 20px) * (100vw / 1300px));
     }
-.virgula{
+    .txt_slide {
+      text-align: center;
+      p {
+        font-size: 38px;
+        padding-bottom: 15px;
+        @media (max-width: 778.98px) {
+          font-size: calc(
+            16px + (38px - 16px) * (100vw / (calc($maxWidthContainer - 20px)))
+          );
+        }
+      }
+      span {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+  .virgula {
     z-index: 0;
     font-size: 72px;
     font-family: Bernard MT Condensed;
     color: #d3d3d3;
-    @media(max-width: 778.98px) {
-        font-size: calc(50px + (72px - 50px) * (100vw / (calc($maxWidthContainer - 20px))));
+    @media (max-width: 778.98px) {
+      font-size: calc(
+        50px + (72px - 50px) * (100vw / (calc($maxWidthContainer - 20px)))
+      );
     }
-    &:before{
-        content: '“';
-        display: flex;
+    &:before {
+      content: "“";
+      display: flex;
     }
-    &:after{
-        content: '”';
-        position: absolute;
-        display: flex;
-        bottom: 0;
-        right: 0;
-        padding-right: 20px;
+    &:after {
+      content: "”";
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      right: 0;
+      padding-right: 20px;
     }
-}
-
-.slick-track {
+  }
+  
+  .slick-track {
     display: flex;
-}
-
-.slick-list {
+  }
+  
+  .slick-list {
     overflow: hidden;
-}
-
-// .slider .slick-arrow {
-//     background-color: transparent;
-//     border: none;
-//     font-size: 0;
-// }
+  }
+  
