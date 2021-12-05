@@ -1,0 +1,48 @@
+@import 'variables.scss';
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    background-color: $gray-color;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+._container {
+    max-width: calc($maxWidthContainer - 20px);
+    padding: 0 10px;
+    margin: 0 auto;
+    @media (max-width: $md1) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2 + px) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3 + px) {
+        max-width: none;
+    }
+}
+
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}

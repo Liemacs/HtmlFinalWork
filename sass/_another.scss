@@ -1,0 +1,76 @@
+  //=============Next -> start section block=======================//
+.slogan_section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  padding: 120px 0;
+  background-color: white;
+  h1 {
+      font-size: calc(55px + (72px - 55px) * (100vw / (calc($maxWidthContainer - 20px))));
+      font-weight: 200;
+  }
+  p {
+      margin-top: 60px;
+      font-size: calc(12px + (18px - 12px) * (100vw / (calc($maxWidthContainer - 20px))));
+      @media (max-width: $md2 + px) {
+          margin-top: 30px;
+      }
+  }
+}
+
+  //=============END -> start section block=======================//
+
+  //=============Start -> avantage section block=======================//
+.avantage, .compartiment {
+  background-color: $gray-color;
+}
+
+.box_items {
+      padding: 105px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .item {
+        width: 30%;
+        .txt_content {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 100%;
+          @media (max-width: 991.98px){
+            height: auto;
+        }
+      }
+        @media (max-width: 991.98px){
+          width: 45%;
+          &:last-child{
+              width: 100%;
+              padding-top: 35px;
+          }
+      }
+      @media (max-width: 651.98px){
+              width: 100%;
+              &:not(:first-child){
+                padding-top: 35px;
+              }
+      }
+      }
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        padding: 30px 0;
+        color: #a2a2a2;
+      }
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+
+      }
+}
+
+  //=============Start -> avantage section block=======================//
+
+
+

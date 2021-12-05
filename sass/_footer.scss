@@ -1,0 +1,98 @@
+footer {
+    position: relative;
+}
+
+.txt_motivation {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    z-index: -1;
+    justify-content: center;
+    p {
+        line-height: 1.3;
+    font-size: calc(55px + (90px - 70px) * (100vw / (calc(1600px - 20px))));
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-align: end;
+    }
+}
+.footer_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    transform: translateY(70px);
+}
+
+.footer-box {
+    display: none;
+    @media (min-width: $md3 + px) {
+        background-color: #000;
+        display: flex;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 520px 0px 100px 0;
+        padding: 50px;
+        .footer_logo {
+            padding-right: 40px;
+        }
+        .footer-box_content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .footer_menu {
+                display: flex;
+                justify-content: space-between;
+                width: 65%;
+                li{
+                    cursor: pointer;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            .footer_links {
+                display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+                h1 {
+                    font-size: 12px;
+                    text-align: end;
+                    color: #333;
+                    margin-bottom: 15px;
+                }
+            }
+            a[href="#getcraftwork"] {
+                color: #333;
+                font-size: 12px;
+                text-transform: none;
+                text-align: end;
+            }
+            .footer_scocial_links {
+                margin-top: 20px;
+                display: flex;
+                a {
+                    font-size: 25px;
+                    color: #333;
+                }
+            }
+            .bottom_links {
+                text-align: end;
+            }
+        }
+    }
+    
+}
+
+.footer_scocial_links {
+    .footer_icon_social {
+        &:not(:first-child) {
+            padding-left: 33px;
+    }
+    }
+}
+
